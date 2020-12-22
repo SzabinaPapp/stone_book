@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: rgb(243, 243, 241);
+	text-align: justify;
+}
+
+#root {
+	display: block;
+	margin: 20px;
+	padding: 10px;
+	border: 1px solid gray;
+	border-radius: 3px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: rgb(27, 24, 24);
+}
+
+div {
+	margin: 10px;
+	padding: 10px;
+	background-color: rgb(233, 233, 233);
+}
+
+code {
+	display: inline-block;
+	width: 80%;
+	padding: 10px;
+	margin: 10px;
+	font-size: 13px;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+	border-radius: 8px;
+	background-color: rgb(235, 212, 193);
+}
