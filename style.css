@@ -4,36 +4,45 @@
 	margin: 0;
 	padding: 10px;
 	box-sizing: border-box;
+	align-items: center;
 	background-color: rgb(243, 243, 241);
-	text-align: justify;
 }
 
 #root {
 	display: block;
-	margin: 20px;
-	padding: 10px;
+	width: 100%;
 	border: 1px solid gray;
 	border-radius: 3px;
 	font-family: 'Roboto', sans-serif;
+	align-items: center;
 	text-align: center;
+	justify-content: center;
 	color: rgb(27, 24, 24);
 }
 
 div {
-	margin: 10px;
-	padding: 10px;
+	width: 100%;
+	/* margin: 10px;
+	padding: 10px; */
+	align-items: center;
+	text-align: center;
+	justify-content: center;
 	background-color: rgb(233, 233, 233);
 }
 
 code {
-	display: inline-block;
-	width: 80%;
-	padding: 10px;
-	margin: 10px;
+	display: flex;
+	width: 100%;
 	font-size: 13px;
 	align-items: center;
-	text-align: center;
+	text-align: left;
 	justify-content: center;
 	border-radius: 8px;
 	background-color: rgb(235, 212, 193);
+}
+#text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
