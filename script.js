@@ -153,9 +153,9 @@ function pageLoad() {
 	notes.push({
 		tag: "div",
 		content: `
-			8. A for ciklussal általában megszámolunk valamit, vagy számokat léptetünk. Módszer egy értéktartomány bejárására. A zárójelek között adjuk, meg hogy hogyan működjön a ciklus, a kapcsos zárójelek között pedig, hogy milyen parancs hajtódjon végre. A zárójelek közé 3 paramétert kell megadnunk. Az első paraméterben definiáljuk a ciklus változót és annak értékét, ami 0.
+			8. A for ciklussal általában megszámolunk valamit, vagy számokat léptetünk. Módszer egy értéktartomány bejárására. A zárójelek között adjuk meg, hogy hogyan működjön a ciklus, a kapcsos zárójelek között pedig, hogy milyen parancs hajtódjon végre. A zárójelek közé 3 paramétert kell megadnunk. Az első paraméterben definiáljuk a ciklus változót és annak értékét, ami 0.
 			A második paraméterben megadjuk a feltételt.
-			A harmadik paraméterben pedig megadjuk, hogy minden egyes iteráció után az “i” változó értéke növekedjen egyel. Ezzel a példával 10-szer íratjuk ki a szöveget:
+			A harmadik paraméterben pedig megadjuk, hogy minden egyes iteráció után az “i” változó értéke növekedjen eggyel. Ezzel a példával 10-szer íratjuk ki a szöveget:
 		`
 	});
 	
@@ -214,6 +214,86 @@ function pageLoad() {
 						return a+b;
 					} 0);
 				}
+			}
+		`
+	});
+	
+	// két adott érték közötti számok összeadása
+	
+	notes.push({
+		tag: "div",
+		content: `
+			11. ha adott két érték (pl: a és b) a közötte lévő számokat a következő képen lehet összeadni:
+		`
+	});
+	
+	notes.push({
+		tag: "code",
+		content: `
+		function sumBetween(a,b) {
+			let sum = 0;
+			let start = a;
+			let stop = b;
+			if ( b < a ) {
+				 start = b;
+				 stop = a;
+			}
+			for(let i=start;i<=stop;i++) {
+			 sum = sum + i;
+			}
+			return sum;
+		}
+		`
+	});
+	
+	// tömbhöz másik tömb értékeit hozzáadni, majd az értékeket abc sorrendben visszaadni
+	
+	notes.push({
+		tag: "div",
+		content: `
+			12. adott tömbhöz másik tömb értékeit hozzáadni, majd sorrendben visszaadni:
+		`
+	});
+	
+	notes.push({
+		tag: "code",
+		content: `
+		function addValuesToArray(array, values) {
+			for(let i = 0; i<values.length; i++) {
+				 array.unshift(values[i]);
+			}
+			return array.sort();
+	 } 
+		`
+	});
+
+
+	
+	// számok összeadása és stringként való visszaadása
+	
+	notes.push({
+		tag: "div",
+		content: `
+			11. Ha az a és b értéke string-ként van megadva, akkor először parseInt-tel számmá kell alakítanunk, kiszámolni az összegét, majd return-nel visszaadni a sum értékét, de toStringként:
+		`
+	});
+	
+	notes.push({
+		tag: "code",
+		content: `
+			function sumStr(a,b) {
+				
+				if (a.length === 0) {
+					a = 0;
+				} 
+			
+				if (b.length === 0) {
+					b = 0;
+				} 
+  
+				let sum = parseInt(a) + parseInt(b);
+			
+				return sum.toString();
 			}
 		`
 	});
